@@ -1,0 +1,35 @@
+definir_tema:
+  description: >
+    Escolher o tema da postagem com base em uma biblioteca de código que seja útil e relevante para a comunidade.
+  expected_output: >
+    Nome da biblioteca escolhida + uma justificativa breve sobre sua importância.
+  agent: especialista_conteudo
+
+pesquisar_biblioteca:
+  description: >
+    Analisar a biblioteca escolhida, sua documentação, issues populares, exemplos de uso e diferenciais técnicos.
+  expected_output: >
+    Lista com 10 tópicos técnicos ou funcionais relevantes da biblioteca.
+  agent: pesquisador_tecnico
+
+estruturar_conteudo:
+  description: >
+    Definir a estrutura da postagem: gancho, tópicos principais e chamada para ação, mantendo foco em clareza e didática.
+  expected_output: >
+    Um esqueleto textual com blocos claros e objetivos de comunicação para cada parte do post.
+  agent: planner_conteudo
+
+redigir_texto:
+  description: >
+    Transformar a estrutura aprovada em um texto fluido, com linguagem informal-profissional e foco em ensino e engajamento.
+  expected_output: >
+    Texto completo e pronto para publicação no LinkedIn, com tom acessível e envolvente.
+  agent: redator_tecnico
+
+revisar_texto:
+  description: >
+    Revisar o conteúdo final, identificando eventuais falhas técnicas, ambiguidade ou necessidade de ajustes.
+  expected_output: >
+    Versão final aprovada tecnicamente, com correções aplicadas.
+  agent: revisor_tecnico
+
