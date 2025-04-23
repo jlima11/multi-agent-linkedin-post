@@ -83,6 +83,7 @@ class ProjetoGeradorPostTecLinkedin():
     def revisar_texto(self) -> Task:
         return Task(
             config=self.tasks_config['revisar_texto'],
+            output_file='output/texto.txt',
         )
     @crew
     def crew(self) -> Crew:

@@ -4,7 +4,7 @@ import warnings
 
 from datetime import datetime
 
-from projeto_gerador_post_tec_linkedin.crew import ProjetoGeradorPostTecLinkedin
+from crew import ProjetoGeradorPostTecLinkedin
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
@@ -13,14 +13,17 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 # Replace with inputs you want to test with, it will automatically
 # interpolate any tasks and agents information
 
+BIBLIOTECA = '''CrewAI'''
+
 def run():
     """
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs',
-        'current_year': str(datetime.now().year)
+        'nome_da_biblioteca': BIBLIOTECA,
     }
+    print(f"Inputs enviados para o agente: {inputs}")  # Adicione esta linha para depuração
+
     
     try:
         ProjetoGeradorPostTecLinkedin().crew().kickoff(inputs=inputs)
@@ -64,3 +67,6 @@ def test():
 
     except Exception as e:
         raise Exception(f"An error occurred while testing the crew: {e}")
+
+if __name__ == "__main__":
+    run()

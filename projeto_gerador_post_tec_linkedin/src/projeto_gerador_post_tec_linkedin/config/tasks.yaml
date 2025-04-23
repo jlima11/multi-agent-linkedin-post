@@ -1,20 +1,21 @@
 definir_tema:
   description: >
-    Escolher o tema da postagem com base em uma biblioteca de código que seja útil e relevante para a comunidade.
+    Escolher o tema da postagem com base na biblioteca <nome_da_biblioteca>.
+    O tema deve ser algo que desperte interesse e curiosidade, com potencial educativo e prático.
   expected_output: >
-    Nome da biblioteca escolhida + uma justificativa breve sobre sua importância.
+    <nome_da_biblioteca> e uma justificativa breve sobre sua importância.
   agent: especialista_conteudo
 
 pesquisar_biblioteca:
   description: >
-    Analisar a biblioteca escolhida, sua documentação, issues populares, exemplos de uso e diferenciais técnicos.
+    Analisar a biblioteca escolhida anteriormente, sua documentação, fluxo de desenvolvimento, exemplos de uso, aquitetura, caso de uso, diferenciais técnicos e opcionais a essa biblioteca.
   expected_output: >
     Lista com 10 tópicos técnicos ou funcionais relevantes da biblioteca.
   agent: pesquisador_tecnico
 
 estruturar_conteudo:
   description: >
-    Definir a estrutura da postagem: gancho, tópicos principais e chamada para ação, mantendo foco em clareza e didática.
+    Definir a estrutura da postagem: gancho, tópicos principais e chamada para ação, mantendo foco em clareza e didática para ensinar sobre a biblioteca definida anteriormente.
   expected_output: >
     Um esqueleto textual com blocos claros e objetivos de comunicação para cada parte do post.
   agent: planner_conteudo
